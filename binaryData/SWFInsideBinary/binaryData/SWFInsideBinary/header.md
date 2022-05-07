@@ -1,0 +1,8 @@
+Signature: FWS
+Compression: LZMA
+SWF Version: 14
+GFX: No
+File size: 36121425
+Frame rate: 24.0
+Frame count: 1
+Display rect: 0,0 => 10240,960 twips | 0,0 => 512,480 pixels
