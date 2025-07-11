@@ -5,4 +5,4 @@ the things that didn't change from 3.01 to 3.1.21 are because they're literally 
 
 game from: https://explodingrabbit.com/games/super-mario-bros-crossover/
 
-i figured out why this didn't work, and no, it's nothing to do with it's files, it was adobe's fault all along, there's an control panel on flash player, that tells if the file has access to local or local-with-network, this game uses both so flash player throws an error about it, you can change that yourself by editing it's trusted state, setting the file to trusted state solves the problem
+turns out i wasn't clear enough, so here's a rewrite, the game fails to launch on a standalone flash player because of security violations, the game tries to access a server on the web and store content locally, that conflicts with the default security settings, so you need to reinstall adobe's flash player somehow so the global settings panel can be opened, by accessing it you can make an exception for SMBC 3.x so it can access the webserver and store data locally also be aware this is a security concern, so be mindful of that, it's unlikely that you'll get hacked from this, but it's still possible
