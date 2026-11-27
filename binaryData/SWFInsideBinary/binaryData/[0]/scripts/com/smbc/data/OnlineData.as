@@ -18,7 +18,7 @@ package com.smbc.data
       
       private static var _instance:OnlineData;
       
-      private static const URL_TO_LOAD:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/raw/refs/heads/mod-3.1.22/FilesCalledFromInternet/data.txt.gz";
+      private static const URL_TO_LOAD:String = "https://stshazzy.github.io/data.txt.gz";
       
       public static const FUNDING_BOX_ICONS_REPLACEMENT_STRING:String = "FUNDING_BOX_ICONS";
       
