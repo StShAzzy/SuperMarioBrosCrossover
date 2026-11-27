@@ -6,10 +6,8 @@ And only after that consider any more changes
 
 # How to Play
 
-Run the file `smbc-patched.swf` in Ruffle or Flash Projector
-
-You can download it from [Releases](https://github.com/StShAzzy/SuperMarioBrosCrossover/releases) tab
-Or the [Nightly](https://github.com/StShAzzy/SuperMarioBrosCrossover/blob/mod-3.1.22/smbc-patched.swf) from the repository
+You can either download from the [Releases tab] and setup the sandbox permissions to allow Local-With-Online
+or open from `https://stshazzy.github.io/smbc-3.1.22-compressed.swf`
 
 # Credits
 
