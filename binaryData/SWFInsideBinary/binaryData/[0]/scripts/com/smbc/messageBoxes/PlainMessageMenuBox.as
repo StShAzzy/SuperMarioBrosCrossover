@@ -27,9 +27,8 @@ package com.smbc.messageBoxes
       public static const SET_BUTTONS_END_NAME:String = "setButtonsEnd";
       
       public static const BLANK_PAGE:String = "_blank";
-       
       
-      private var strVec:Vector.<String>;
+      private var strVec:Vector.<String> = new Vector.<String>();
       
       private const ITEM_VEC:Vector.<TextFieldContainer> = new Vector.<TextFieldContainer>();
       
@@ -55,7 +54,7 @@ package com.smbc.messageBoxes
       
       protected const SUPER_RETRO_SQUAD_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki/Super-Retro-Squad";
       
-      public var SN_CHANGE_SELECTION:String;
+      private var SN_CHANGE_SELECTION:String;
       
       protected var cSelNum:int;
       
@@ -69,14 +68,14 @@ package com.smbc.messageBoxes
       
       private const COLOR_PINK:uint = 4294954695;
       
-      private const SND_MNGR:SoundManager = SoundManager.SND_MNGR;
+      private var SND_MNGR:SoundManager;
       
       private var madeFirstSelection:Boolean;
       
       public function PlainMessageMenuBox(param1:String, param2:Vector.<String>, param3:int = 0)
       {
-		 this.public::SN_CHANGE_SELECTION = MessageBoxSounds.SN_CHANGE_SELECTION;
-         this.strVec = new Vector.<String>();
+         this.SN_CHANGE_SELECTION = MessageBoxSounds.SN_CHANGE_SELECTION;
+         this.SND_MNGR = SoundManager.SND_MNGR;
          this.strVec = param2.concat();
          super(param1);
          this.cSelNum = param3;
@@ -198,8 +197,9 @@ package com.smbc.messageBoxes
                {
                   navigateToURL(new URLRequest(OnlineData.gameUrl),BLANK_PAGE);
                   nextMsgBxToCreate = null;
+                  break;
                }
-               else if(nextMsgBxToCreate == null && _loc4_.fileRef == null)
+               if(nextMsgBxToCreate == null && _loc4_.fileRef == null)
                {
                   _loc4_.loadSaveData();
                }
@@ -235,11 +235,9 @@ package com.smbc.messageBoxes
                {
                   EVENT_MNGR.restartGame();
                   nextMsgBxToCreate = null;
+                  break;
                }
-               else
-               {
-                  MSG_BX_MNGR.writeNextMainMenu(this);
-               }
+               MSG_BX_MNGR.writeNextMainMenu(this);
                break;
             case MessageBoxMessages.TUTORIALS_ARE_ON:
                if(!_loc2_)
@@ -263,18 +261,17 @@ package com.smbc.messageBoxes
                      nextMsgBxToCreate = MSG_BX_MNGR.setBtnsDct[MessageBoxMessages.SET_BUTTONS_LFT];
                      BTN_MNGR.setButtons = true;
                   }
+                  break;
                }
-               else if(mbName == SET_BUTTONS_END_NAME)
+               if(mbName == SET_BUTTONS_END_NAME)
                {
                   nextMsgBxToCreate = new OptionsMenu();
                   if(_loc2_)
                   {
                      BTN_MNGR.writeNewButtons();
+                     break;
                   }
-                  else
-                  {
-                     BTN_MNGR.discardTempButtons();
-                  }
+                  BTN_MNGR.discardTempButtons();
                }
          }
          if(_loc2_ || _loc3_)
@@ -365,3 +362,4 @@ package com.smbc.messageBoxes
       }
    }
 }
+

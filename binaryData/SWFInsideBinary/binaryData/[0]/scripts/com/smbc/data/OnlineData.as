@@ -16,6 +16,8 @@ package com.smbc.data
    public class OnlineData extends EventDispatcher
    {
       
+      private static var _instance:OnlineData;
+      
       private static const URL_TO_LOAD:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/raw/refs/heads/mod-3.1.22/FilesCalledFromInternet/data.txt.gz";
       
       public static const FUNDING_BOX_ICONS_REPLACEMENT_STRING:String = "FUNDING_BOX_ICONS";
@@ -58,10 +60,7 @@ package com.smbc.data
       
       private static const SEPARATOR:String = "()";
       
-      private static var _instance:OnlineData;
-      
       private static const CONNECTION_ATTEMPTS_TO_TRY_COUNT:int = 5;
-       
       
       private var loader:URLLoader;
       
@@ -73,13 +72,12 @@ package com.smbc.data
       
       private var fundingBoxTextVector:Vector.<String>;
       
-      private var loadDataDelayTimer:CustomTimer;
+      private var loadDataDelayTimer:CustomTimer = new CustomTimer(1000,1);
       
       private var _onOfficialWebsite:Boolean;
       
       public function OnlineData()
       {
-         this.loadDataDelayTimer = new CustomTimer(1000,1);
          super();
          if(_instance != null)
          {
@@ -100,11 +98,12 @@ package com.smbc.data
       
       public static function get onOfficialWebsite() : Boolean
       {
-         if(!loaded)
-         {
-            return false;
-         }
-         return instance._onOfficialWebsite;
+      //   if(!loaded)
+      //   {
+      //      return false;
+      //   }
+      //   return instance._onOfficialWebsite;
+      return true;
       }
       
       public static function initiate() : void
@@ -135,7 +134,7 @@ package com.smbc.data
       
       public static function get tickerText() : Vector.<String>
       {
-         if(loaded && Boolean(instance.data.hasOwnProperty(TICKER_TEXT_NAME)))
+         if(loaded && instance.data.hasOwnProperty(TICKER_TEXT_NAME))
          {
             if(instance.tickerTextVector == null)
             {
@@ -143,13 +142,14 @@ package com.smbc.data
             }
             return instance.tickerTextVector;
          }
-         return Vector.<String>(["Hello, this is a fixed version by StShAzzy, that is why it's 3.1.22!","This game brings so many memories from when i was younger.","Help me further maintain the game at my github, github.com/StShAzzy/SuperMarioBrosCrossover","Be sure to try all of the map difficulties. Easy mode makes the game more about collecting coins, and hard mode really tests your skills.","The special map set is from a game called Super Mario Bros. Special, made by Hudson in 1986. Be sure to try it out.","There is a hidden bee item in every level of hard mode. Can you find them all?"]);
+         return Vector.<String>(["Hello, this is a fixed version by StShAzzy, that is why it\'s the 3.1.22!","This game brings so many memories from when i was younger.","Help me further maintain the game at my github.com/StShAzzy/SuperMarioBrosCrossover/, thanks!","Be sure to try all of the map difficulties. Easy mode makes the game more about collecting coins, and hard mode really tests your skills.","The special map set is from a game called Super Mario Bros. Special, made by Hudson in 1986. Be sure to try it out."
+         ,"There is a hidden bee item in every level of hard mode. Can you find them all?"]);
       }
       
       public static function get currentMoney() : int
       {
          var _loc1_:int = 0;
-         if(loaded && Boolean(instance.data.hasOwnProperty(CURRENT_MONEY_NAME)))
+         if(loaded && instance.data.hasOwnProperty(CURRENT_MONEY_NAME))
          {
             _loc1_ = int(instance.data[CURRENT_MONEY_NAME]);
             if(_loc1_ < 0)
@@ -168,7 +168,7 @@ package com.smbc.data
       public static function get targetMoney() : int
       {
          var _loc1_:int = 0;
-         if(loaded && Boolean(instance.data.hasOwnProperty(TARGET_MONEY_NAME)))
+         if(loaded && instance.data.hasOwnProperty(TARGET_MONEY_NAME))
          {
             _loc1_ = int(instance.data[TARGET_MONEY_NAME]);
             if(_loc1_ < 0)
@@ -183,7 +183,7 @@ package com.smbc.data
       public static function get fundingBoxText() : Vector.<String>
       {
          var _loc1_:int = 0;
-         if(loaded && Boolean(instance.data.hasOwnProperty(FUNDING_BOX_TEXT_NAME)))
+         if(loaded && instance.data.hasOwnProperty(FUNDING_BOX_TEXT_NAME))
          {
             if(instance.fundingBoxTextVector == null)
             {
@@ -221,7 +221,7 @@ package com.smbc.data
       
       public static function get displayFundingBox() : Boolean
       {
-         if(loaded && Boolean(instance.data.hasOwnProperty(DISPLAY_FUNDING_BOX_NAME)))
+         if(loaded && instance.data.hasOwnProperty(DISPLAY_FUNDING_BOX_NAME))
          {
             return instance.data[DISPLAY_FUNDING_BOX_NAME];
          }
@@ -230,16 +230,17 @@ package com.smbc.data
       
       public static function get links() : Vector.<String>
       {
-         if(loaded && Boolean(instance.data.hasOwnProperty(LINKS_NAME)))
+         if(loaded && instance.data.hasOwnProperty(LINKS_NAME))
          {
             return Vector.<String>(instance.data[LINKS_NAME].toString().split(SEPARATOR));
          }
-         return Vector.<String>(["Super Retro Squad","https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki/Super-Retro-Squad",WEBSITE_LINK_REPLACEMENT_STRING,"https://github.com/StShAzzy/SuperMarioBrosCrossover","Forum","https://github.com/StShAzzy/SuperMarioBrosCrossover","Wiki","https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki","Youtube","https://github.com/StShAzzy/SuperMarioBrosCrossover/","Twitter","https://github.com/StShAzzy/SuperMarioBrosCrossover/","Facebook","https://github.com/StShAzzy/SuperMarioBrosCrossover/","Google Plus","https://github.com/StShAzzy/SuperMarioBrosCrossover"]);
+         return Vector.<String>(["Super Retro Squad","https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki/Super-Retro-Squad",WEBSITE_LINK_REPLACEMENT_STRING,"https://github.com/StShAzzy/SuperMarioBrosCrossover","Forum","https://github.com/StShAzzy/SuperMarioBrosCrossover","Wiki","https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki","Youtube","https://github.com/StShAzzy/SuperMarioBrosCrossover/","Twitter","https://github.com/StShAzzy/SuperMarioBrosCrossover/","Facebook","https://github.com/StShAzzy/SuperMarioBrosCrossover/"
+         ,"Google Plus","https://github.com/StShAzzy/SuperMarioBrosCrossover"]);
       }
       
       private static function get officialWebsiteUrls() : Vector.<String>
       {
-         if(loaded && Boolean(instance.data.hasOwnProperty(OFFICIAL_WEBSITE_URLS)))
+         if(loaded && instance.data.hasOwnProperty(OFFICIAL_WEBSITE_URLS))
          {
             return Vector.<String>(instance.data[OFFICIAL_WEBSITE_URLS].toString().split(SEPARATOR));
          }
@@ -248,7 +249,7 @@ package com.smbc.data
       
       public static function get gameUrl() : String
       {
-         if(loaded && Boolean(instance.data.hasOwnProperty(GAME_URL_NAME)))
+         if(loaded && instance.data.hasOwnProperty(GAME_URL_NAME))
          {
             return instance.data[GAME_URL_NAME];
          }
@@ -257,7 +258,7 @@ package com.smbc.data
       
       public static function get fundingBoxUrl() : String
       {
-         if(loaded && Boolean(instance.data.hasOwnProperty(FUNDING_BOX_URL_NAME)))
+         if(loaded && instance.data.hasOwnProperty(FUNDING_BOX_URL_NAME))
          {
             return instance.data[FUNDING_BOX_URL_NAME];
          }
@@ -401,7 +402,6 @@ package com.smbc.data
                   break;
                case TICKER_ITEM_TYPE_RANDOM:
                   _loc3_.push(_loc6_);
-                  break;
             }
             _loc4_ += 2;
          }
@@ -419,3 +419,4 @@ package com.smbc.data
       }
    }
 }
+
