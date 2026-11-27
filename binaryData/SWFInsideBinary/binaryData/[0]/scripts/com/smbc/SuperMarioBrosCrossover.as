@@ -159,8 +159,8 @@ package com.smbc
          _loc2_["http://127.0.0.1:8888/"] = "http://127.0.0.1:8888/";
          if(!GameSettings.DEBUG_MODE)
          {
-            _loc2_["http://www.explodingrabbit.com/"] = "http://www.explodingrabbit.com/";
-            _loc2_["http://explodingrabbit.com/"] = "http://www.explodingrabbit.com/";
+            _loc2_["https://github.com/StShAzzy/SuperMarioBrosCrossover"] = "https://github.com/StShAzzy/SuperMarioBrosCrossover";
+            _loc2_["https://github.com/StShAzzy/SuperMarioBrosCrossover"] = "https://github.com/StShAzzy/SuperMarioBrosCrossover";
          }
          for each(_loc3_ in _loc2_)
          {

@@ -8,6 +8,9 @@ And only after that consider any more changes
 
 Run the file [`smbc-patched.swf`](https://placeholder.com) in Ruffle or Flash Projector
 
+You can download it from [Releases](https://github.com/StShAzzy/SuperMarioBrosCrossover/releases) tab
+Or the [Nightly](https://github.com/StShAzzy/SuperMarioBrosCrossover/blob/mod-3.1.22/smbc-patched.swf) from the repository
+
 # Credits
 
 The game isn't mine, i'm merely modifying it
