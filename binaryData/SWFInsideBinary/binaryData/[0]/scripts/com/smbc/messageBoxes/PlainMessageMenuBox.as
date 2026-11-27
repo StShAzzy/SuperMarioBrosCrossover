@@ -55,7 +55,7 @@ package com.smbc.messageBoxes
       
       protected const SUPER_RETRO_SQUAD_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki/Super-Retro-Squad";
       
-      protected const SN_CHANGE_SELECTION:String = MessageBoxSounds.SN_CHANGE_SELECTION;
+      public var SN_CHANGE_SELECTION:String;
       
       protected var cSelNum:int;
       
@@ -75,6 +75,7 @@ package com.smbc.messageBoxes
       
       public function PlainMessageMenuBox(param1:String, param2:Vector.<String>, param3:int = 0)
       {
+		 this.public::SN_CHANGE_SELECTION = MessageBoxSounds.SN_CHANGE_SELECTION;
          this.strVec = new Vector.<String>();
          this.strVec = param2.concat();
          super(param1);
