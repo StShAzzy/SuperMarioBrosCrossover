@@ -10,13 +10,13 @@ package com.smbc.messageBoxes
    public class LinksMenu extends MenuBox
    {
       
-      public static const YOUTUBE_URL:String = "http://www.youtube.com/TheExplodingRabbit";
+      public static const YOUTUBE_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/";
       
-      public static const TWITTER_URL:String = "http://www.twitter.com/ExplodingRabbit";
+      public static const TWITTER_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/";
       
-      public static const FACEBOOK_URL:String = "http://www.facebook.com/ExplodingRabbit";
+      public static const FACEBOOK_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/";
       
-      public static const GOOGLE_PLUS_URL:String = "https://plus.google.com/+explodingrabbit/";
+      public static const GOOGLE_PLUS_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/";
       
       private static const LINKS_SEP:String = "()";
        

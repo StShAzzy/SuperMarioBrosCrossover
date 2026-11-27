@@ -143,7 +143,7 @@ package com.smbc.data
             }
             return instance.tickerTextVector;
          }
-         return Vector.<String>(["Please consider playing the game on our website, ExplodingRabbit.com. It helps us in many different ways, and you\'ll always be playing the newest version.","Please help us to make our first commercial game, Super Retro Squad. Choose Super Retro Squad in the links menu to learn more!","Join the community and talk more about Super Mario Bros. Crossover in the Exploding Rabbit forums. You can find it in the links menu.","Be sure to try all of the map difficulties. Easy mode makes the game more about collecting coins, and hard mode really tests your skills.","The special map set is from a game called Super Mario Bros. Special, made by Hudson in 1986. Be sure to try it out.","There is a hidden bee item in every level of hard mode. Can you find them all?"]);
+         return Vector.<String>(["Hello, this is a fixed version by StShAzzy, that is why it's 3.1.22!","This game brings so many memories from when i was younger.","Help me further maintain the game at my github, github.com/StShAzzy/SuperMarioBrosCrossover","Be sure to try all of the map difficulties. Easy mode makes the game more about collecting coins, and hard mode really tests your skills.","The special map set is from a game called Super Mario Bros. Special, made by Hudson in 1986. Be sure to try it out.","There is a hidden bee item in every level of hard mode. Can you find them all?"]);
       }
       
       public static function get currentMoney() : int
@@ -234,7 +234,7 @@ package com.smbc.data
          {
             return Vector.<String>(instance.data[LINKS_NAME].toString().split(SEPARATOR));
          }
-         return Vector.<String>(["Super Retro Squad","http://www.explodingrabbit.com/games/super-retro-squad",WEBSITE_LINK_REPLACEMENT_STRING,"http://www.explodingrabbit.com","Forum","http://www.explodingrabbit.com/forum/forums/super-mario-bros-crossover.32/","Wiki","http://www.explodingrabbit.com/wiki/Super_Mario_Bros._Crossover","Youtube","http://www.youtube.com/theexplodingrabbit","Twitter","http://www.twitter.com/explodingrabbit","Facebook","http://www.facebook.com/ExplodingRabbit","Google Plus","https://plus.google.com/+explodingrabbit"]);
+         return Vector.<String>(["Super Retro Squad","https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki/Super-Retro-Squad",WEBSITE_LINK_REPLACEMENT_STRING,"https://github.com/StShAzzy/SuperMarioBrosCrossover","Forum","https://github.com/StShAzzy/SuperMarioBrosCrossover","Wiki","https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki","Youtube","https://github.com/StShAzzy/SuperMarioBrosCrossover/","Twitter","https://github.com/StShAzzy/SuperMarioBrosCrossover/","Facebook","https://github.com/StShAzzy/SuperMarioBrosCrossover/","Google Plus","https://github.com/StShAzzy/SuperMarioBrosCrossover"]);
       }
       
       private static function get officialWebsiteUrls() : Vector.<String>
@@ -252,7 +252,7 @@ package com.smbc.data
          {
             return instance.data[GAME_URL_NAME];
          }
-         return "http://www.explodingrabbit.com/games/super-mario-bros-crossover";
+         return "https://github.com/StShAzzy/SuperMarioBrosCrossover/";
       }
       
       public static function get fundingBoxUrl() : String

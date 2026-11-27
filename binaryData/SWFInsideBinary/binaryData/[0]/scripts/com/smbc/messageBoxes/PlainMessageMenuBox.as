@@ -47,13 +47,13 @@ package com.smbc.messageBoxes
       
       protected const SELECTOR:Sprite = new MushroomSelector();
       
-      protected const GAMEPAD_INFO_URL:String = "http://www.explodingrabbit.com/games/super-mario-bros-crossover/how-to-play-with-a-gamepad";
+      protected const GAMEPAD_INFO_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki/How-to-play-with-a-gamepad";
       
-      protected const VISIT_WEBSITE_URL:String = "http://www.explodingrabbit.com";
+      protected const VISIT_WEBSITE_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover";
       
-      protected const VIEW_WIKI:String = "http://www.explodingrabbit.com/wiki/Super_Mario_Bros._Crossover";
+      protected const VIEW_WIKI:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki";
       
-      protected const SUPER_RETRO_SQUAD_URL:String = "http://www.explodingrabbit.com/games/super-retro-squad";
+      protected const SUPER_RETRO_SQUAD_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/wiki/Super-Retro-Squad";
       
       protected const SN_CHANGE_SELECTION:String = MessageBoxSounds.SN_CHANGE_SELECTION;
       
