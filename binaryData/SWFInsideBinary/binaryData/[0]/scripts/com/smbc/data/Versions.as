@@ -31,8 +31,9 @@ package com.smbc.data
       
       public static const V_3_121:Number = 3.121;
       
-      private static const arr:Array = [V_2_0,V_2_0_2,V_2_0_3,V_2_0_31,V_2_1,V_2_1_1,V_2_1_11,V_3_0,V_3_01,V_3_02,V_3_1,V_3_101,V_3_12,V_3_121];
-       
+      public static const V_3_122:Number = 3.122;
+      
+      private static const arr:Array = [V_2_0,V_2_0_2,V_2_0_3,V_2_0_31,V_2_1,V_2_1_1,V_2_1_11,V_3_0,V_3_01,V_3_02,V_3_1,V_3_101,V_3_12,V_3_121,V_3_122];
       
       public function Versions()
       {
@@ -81,9 +82,12 @@ package com.smbc.data
                return "3.1.2";
             case V_3_121:
                return "3.1.21";
+            case V_3_122:
+               return "3.1.22";
             default:
                throw new Error("string not written for this version");
          }
       }
    }
 }
+

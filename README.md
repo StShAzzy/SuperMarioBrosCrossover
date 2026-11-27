@@ -6,7 +6,7 @@ And only after that consider any more changes
 
 # How to Play
 
-Run the file `[smbc-patched.swf](https://placeholder.com)` in Ruffle or Flash Projector
+Run the file [`smbc-patched.swf`](https://placeholder.com) in Ruffle or Flash Projector
 
 # Credits
 

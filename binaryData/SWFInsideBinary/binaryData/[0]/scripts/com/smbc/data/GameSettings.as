@@ -56,7 +56,7 @@ package com.smbc.data
       
       public static const TURN_OFF_SOUND:Boolean = false;
       
-      public static const VERSION_NUMBER:Number = Versions.V_3_121;
+      public static const VERSION_NUMBER:Number = Versions.V_3_122;
       
       public static const VERSION_SAVE_FILE_COMPAT_MIN:Number = Versions.V_3_121;
       

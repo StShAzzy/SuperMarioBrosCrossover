@@ -16,7 +16,7 @@ package com.smbc.data
    public class OnlineData extends EventDispatcher
    {
       
-      private static const URL_TO_LOAD:String = "http://data.explodingrabbit.com/super-mario-bros-crossover/data.txt.gz";
+      private static const URL_TO_LOAD:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/raw/refs/heads/mod-3.1.22/FilesCalledFromInternet/data.txt.gz";
       
       public static const FUNDING_BOX_ICONS_REPLACEMENT_STRING:String = "FUNDING_BOX_ICONS";
       
@@ -32,7 +32,7 @@ package com.smbc.data
       
       public static const WEBSITE_LINK_REPLACEMENT_STRING:String = "Developer Website";
       
-      public static const DEVELOPER_WEBSITE_URL:String = "http://www.explodingrabbit.com/";
+      public static const DEVELOPER_WEBSITE_URL:String = "https://github.com/StShAzzy/SuperMarioBrosCrossover/";
       
       private static const CURRENT_VERSION_NAME:String = "currentVersion";
       
