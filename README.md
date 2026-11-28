@@ -6,8 +6,8 @@ And only after that consider any more changes
 
 # How to Play
 
-You can either download from the [Releases tab] and setup the sandbox permissions to allow Local-With-Online
-or open from `https://stshazzy.github.io/smbc-3.1.22-compressed.swf`
+You can either download from the [Releases tab](https://github.com/StShAzzy/SuperMarioBrosCrossover/releases) and setup the sandbox permissions to allow Local-With-Online
+or open from [`https://stshazzy.github.io/smbc-3.1.22-compressed.swf`](https://stshazzy.github.io/smbc-3.1.22-compressed.swf)
 
 # Credits
 
